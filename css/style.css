@@ -14,6 +14,11 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+#main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -26,7 +31,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: cornflowerblue;
   line-height: 48px;
   display: inline;
 }
@@ -44,6 +49,7 @@ h3 {
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  clear: both; /* added this */
 }
 
 h4 {
@@ -57,10 +63,14 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
+  padding:10px 5%; /* replaced 5% with 0 */
 
 }
 
+h3 {
+  padding: 10px 0;
+  margin-top: 40px;
+}
 
 .date-text {
   font-style: italic;
@@ -86,9 +96,9 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: cornflowerblue;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 20px;
   display: block;
 }
 
@@ -100,16 +110,21 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+  color: cornflowerblue;
+/*  display: none;*/
+  display: inline;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: cornflowerblue;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: cornflowerblue;
+}
+
+.connect {
+  color: #ffffff;
 }
 
 .white-text {
@@ -121,6 +136,10 @@ a {
   background-color: #f3f3f3;
   padding-bottom: 10px;
   clear:both;
+}
+
+.role {
+  color: grey;
 }
 
 .dark-gray {
@@ -137,9 +156,10 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content:space-around;
   padding: 10px;
 }
+
 
 .center-content {
   padding: 2.5% 5%;
@@ -148,6 +168,7 @@ a {
 ul {
   list-style-type: none;
 }
+
 
 .biopic {
   float: left;
@@ -211,4 +232,6 @@ span {
   .biopic {
     display: block;
   }
+  #skills-h3 {
+    display:inline-block;
 }
