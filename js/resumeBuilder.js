@@ -28,20 +28,16 @@ bio.display = function () {
   $("#top").append(formattedRole);
 
   var formattedMobile = HTMLmobile.replace(data, bio.contacts.mobile);
-  $("#topContacts").append(formattedMobile);
-  $("#footerContacts").append(formattedMobile);
+  $("#topContacts, #footerContacts").append(formattedMobile);
 
   var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
-  $("#topContacts").append(formattedEmail);
-  $("#footerContacts").append(formattedEmail);
+  $("#topContacts, #footerContacts").append(formattedEmail);
   
   var formattedGitHub = HTMLgithub.replace(data, bio.contacts.github);
-  $("#topContacts").append(formattedGitHub);
-  $("#footerContacts").append(formattedGitHub);
+  $("#topContacts, #footerContacts").append(formattedGitHub);
 
   var formattedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
-  $("#topContacts").append(formattedTwitter);
-  $("#footerContacts").append(formattedTwitter);
+  $("#topContacts, #footerContacts").append(formattedTwitter);
 
 
   var formattedBioPic = HTMLbioPic.replace(data, bio.bioPic);
@@ -50,7 +46,7 @@ bio.display = function () {
   var formattedWelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
   $("#header").append(formattedWelcomeMsg);
 
-  if (bio.skills !== 0) { // could also do if(bio.skills.length > 0)
+  if (bio.skills.length > 0) { 
     $("#header").append(HTMLskillsStart);
     var formattedSkill = HTMLskills.replace(data, bio.skills[0]);
     $("#skills").append(formattedSkill);
